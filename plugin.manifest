@@ -1,0 +1,9 @@
+# ExternalLink v0.1a by rcosta@uos.de
+pluginname=ExternalLink
+pluginclassname=ExternalLinkPlugin
+origin=virtUOS
+version=0.1a
+studipMinVersion=2.0
+studipMaxVersion=2.4
+dbscheme=sql/install.sql
+uninstalldbscheme=sql/uninstall.sql
