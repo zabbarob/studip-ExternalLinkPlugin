@@ -1,4 +1,16 @@
 <?
+/**
+ * show.php - Template for displaying the ExternalLink plugin.
+ *
+ * This program is free software; you can redistribute it and/or
+ * modify it under the terms of the GNU General Public License as
+ * published by the Free Software Foundation; either version 2 of
+ * the License, or (at your option) any later version.
+ *
+ * @author      Robert Costa <rcosta@uos.de>
+ * @license     http://www.gnu.org/licenses/gpl-2.0.html GPL version 2
+ * @category    Stud.IP
+ */
 $href = htmlReady($external_link);
 $button_text = _("Link in die Zwischenablage kopieren");
 ?>
@@ -8,22 +20,6 @@ $button_text = _("Link in die Zwischenablage kopieren");
 <p><label for="external-link">Externer Link:</label>
 <input type="text" id="external-link" name="external-link" value="<?=$href?>" disabled="disabled" size="<?=strlen($href)?>" /><p>
 
-<p><button id="copy-button" data-clipboard-text="<?=$href?>" title="Klicken zum kopieren."><?=$button_text?></button> <span id="copied" style="display:none; color:green;">Der Link wurde kopiert.</span></p>
-
-<script src="/studip/plugins_packages/virtUOS/ExternalLinkPlugin/assets/ZeroClipboard.js"></script>
-
-<script>
-link = document.getElementById('external-link');
-link.select();
-
-// https://github.com/jonrohan/ZeroClipboard
-var clip = new ZeroClipboard(document.getElementById("copy-button"), {
-  moviePath: "/studip/plugins_packages/virtUOS/ExternalLinkPlugin/assets/ZeroClipboard.swf"
-});
-
-clip.on('complete', function(client, args) {
-    copied = document.getElementById('copied');
-    copied.style.display = 'inline';
-});
-</script>
+<p><button id="copy-button" data-clipboard-text="<?=$href?>" title="Klicken zum kopieren."><?=$button_text?></button>
+<span id="copied">Der Link wurde kopiert.</span></p>
 
