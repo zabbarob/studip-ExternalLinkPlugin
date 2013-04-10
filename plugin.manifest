@@ -2,8 +2,10 @@
 pluginname=ExternalLink
 pluginclassname=ExternalLinkPlugin
 origin=virtUOS
-version=0.1a
+version=1.0
 studipMinVersion=2.0
 studipMaxVersion=2.4
 dbscheme=sql/install.sql
 uninstalldbscheme=sql/uninstall.sql
+description=Provides an external link to the current course.
+
