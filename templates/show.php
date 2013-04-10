@@ -11,6 +11,19 @@
  * @license     http://www.gnu.org/licenses/gpl-2.0.html GPL version 2
  * @category    Stud.IP
  */
+
+// show infobox
+$infobox_content[] = array(
+    'kategorie' => _('Information:'),
+    'eintrag'   => array(array(
+        'icon' => 'icons/16/black/info.png',
+        'text' => 'Nutzen Sie den externen Link um Teilnehmer zu ihrer Veranstaltung einzuladen.')));
+
+$infobox = array(
+    'picture' => 'infobox/board1.jpg',
+    'content' => $infobox_content);
+
+// store values that are used multiple times
 $href = htmlReady($external_link);
 $button_text = _("Link in die Zwischenablage kopieren");
 ?>
