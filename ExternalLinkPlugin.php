@@ -2,7 +2,7 @@
 /**
  * ExternalLinkPlugin.php - Display and copy a link to the current course.
  *
- * Long description for file (if any)...
+ * This file contains the main class of the ExternalLink plugin.
  *
  * This program is free software; you can redistribute it and/or
  * modify it under the terms of the GNU General Public License as
