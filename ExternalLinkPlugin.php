@@ -13,7 +13,7 @@
  * @license     http://www.gnu.org/licenses/gpl-2.0.html GPL version 2
  * @category    Stud.IP
  */
-require 'Utils.php';
+include_once 'ExternalLinkPluginUtils.php';
 
 /**
  * Initializes and displays the ExternalLink plugin.
@@ -65,8 +65,8 @@ class ExternalLinkPlugin extends StudIPPlugin implements StandardPlugin {
         $template = $this->template_factory->open('show');
         $template->set_layout($GLOBALS['template_factory']->open('layouts/base'));
 
-        $query = http_build_query(array('sem_id'=>Utils::getSeminarId(), 'again'=>'yes'));
-        $template->external_link = Utils::getBaseUrl() . 'details.php?' . $query;
+        $query = http_build_query(array('sem_id'=>ExternalLinkPluginUtils::getSeminarId(), 'again'=>'yes'));
+        $template->external_link = ExternalLinkPluginUtils::getBaseUrl() . 'details.php?' . $query;
 
         echo $template->render();
     }
